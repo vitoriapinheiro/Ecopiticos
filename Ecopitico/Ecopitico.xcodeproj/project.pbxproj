@@ -15,6 +15,9 @@
 		444A53BB28CFA79F00DABE4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 444A53B928CFA79F00DABE4E /* LaunchScreen.storyboard */; };
 		444A53C428CFA9FF00DABE4E /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53C228CFA9FF00DABE4E /* UIViewController+Preview.swift */; };
 		444A53C528CFA9FF00DABE4E /* UIView+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53C328CFA9FF00DABE4E /* UIView+Preview.swift */; };
+		444A53C728CFD50600DABE4E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53C628CFD50600DABE4E /* HomeViewController.swift */; };
+		444A53C928CFD58400DABE4E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53C828CFD58400DABE4E /* SearchViewController.swift */; };
+		444A53CB28CFD5C700DABE4E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53CA28CFD5C700DABE4E /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		444A53BC28CFA79F00DABE4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		444A53C228CFA9FF00DABE4E /* UIViewController+Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
 		444A53C328CFA9FF00DABE4E /* UIView+Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
+		444A53C628CFD50600DABE4E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		444A53C828CFD58400DABE4E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		444A53CA28CFD5C700DABE4E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +69,15 @@
 				444A53AB28CFA79C00DABE4E /* AppDelegate.swift */,
 				444A53AD28CFA79C00DABE4E /* SceneDelegate.swift */,
 				444A53AF28CFA79C00DABE4E /* ViewController.swift */,
+				444A53CA28CFD5C700DABE4E /* ProfileViewController.swift */,
+				444A53C828CFD58400DABE4E /* SearchViewController.swift */,
 				444A53B728CFA79F00DABE4E /* Assets.xcassets */,
 				444A53B928CFA79F00DABE4E /* LaunchScreen.storyboard */,
 				444A53BC28CFA79F00DABE4E /* Info.plist */,
 				444A53B428CFA79C00DABE4E /* Ecopitico.xcdatamodeld */,
 				444A53C328CFA9FF00DABE4E /* UIView+Preview.swift */,
 				444A53C228CFA9FF00DABE4E /* UIViewController+Preview.swift */,
+				444A53C628CFD50600DABE4E /* HomeViewController.swift */,
 			);
 			path = Ecopitico;
 			sourceTree = "<group>";
@@ -145,9 +154,12 @@
 			files = (
 				444A53B028CFA79C00DABE4E /* ViewController.swift in Sources */,
 				444A53B628CFA79C00DABE4E /* Ecopitico.xcdatamodeld in Sources */,
+				444A53C928CFD58400DABE4E /* SearchViewController.swift in Sources */,
 				444A53C428CFA9FF00DABE4E /* UIViewController+Preview.swift in Sources */,
 				444A53AC28CFA79C00DABE4E /* AppDelegate.swift in Sources */,
 				444A53AE28CFA79C00DABE4E /* SceneDelegate.swift in Sources */,
+				444A53CB28CFD5C700DABE4E /* ProfileViewController.swift in Sources */,
+				444A53C728CFD50600DABE4E /* HomeViewController.swift in Sources */,
 				444A53C528CFA9FF00DABE4E /* UIView+Preview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

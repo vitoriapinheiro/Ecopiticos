@@ -13,9 +13,9 @@ class MyTabBarController: UITabBarController{
         self.setupTabBarController()
     }
     private func setupTabBarController(){
-        let home = UINavigationController(rootViewController: Home())
-        let search = UINavigationController(rootViewController: Search())
-        let profile = UINavigationController(rootViewController: Profile())
+        let home = UINavigationController(rootViewController: HomeViewController())
+        let search = UINavigationController(rootViewController: SearchViewController())
+        let profile = UINavigationController(rootViewController: ProfileViewController())
         
         self.setViewControllers([home, search, profile], animated: false)
         self.tabBar.backgroundColor = .white
@@ -30,40 +30,11 @@ class MyTabBarController: UITabBarController{
         items[2].image = UIImage(systemName: "person")
         items[2].title = "Perfil"
         self.tabBar.tintColor = UIColor(named: "EcoGreen")
+        tabBar.layer.shadowOffset = CGSize(width: 0, height: -0.5)
+                tabBar.layer.shadowRadius = 0
+                tabBar.layer.shadowColor = UIColor.black.cgColor
+                tabBar.layer.shadowOpacity = 0.3
     }
-    
-}
-
-class Home: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = .green
-    }
-
-
-    
-}
-
-class Search: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = .blue
-    }
-
-
-    
-}
-
-class Profile: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = .systemPink
-    }
-
-
     
 }
 
