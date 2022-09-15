@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		309F5A9428D10DBC00E35EBF /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F5A9328D10DBC00E35EBF /* GroupsViewController.swift */; };
 		444A53AC28CFA79C00DABE4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53AB28CFA79C00DABE4E /* AppDelegate.swift */; };
 		444A53AE28CFA79C00DABE4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53AD28CFA79C00DABE4E /* SceneDelegate.swift */; };
 		444A53B028CFA79C00DABE4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53AF28CFA79C00DABE4E /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		309F5A9328D10DBC00E35EBF /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		444A53A828CFA79C00DABE4E /* Ecopitico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ecopitico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		444A53AB28CFA79C00DABE4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		444A53AD28CFA79C00DABE4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,8 @@
 				444A53AB28CFA79C00DABE4E /* AppDelegate.swift */,
 				444A53AD28CFA79C00DABE4E /* SceneDelegate.swift */,
 				444A53AF28CFA79C00DABE4E /* ViewController.swift */,
+				309F5A9328D10DBC00E35EBF /* GroupsViewController.swift */,
+				444A53C628CFD50600DABE4E /* HomeViewController.swift */,
 				444A53CA28CFD5C700DABE4E /* ProfileViewController.swift */,
 				444A53C828CFD58400DABE4E /* SearchViewController.swift */,
 				444A53B728CFA79F00DABE4E /* Assets.xcassets */,
@@ -77,7 +81,6 @@
 				444A53B428CFA79C00DABE4E /* Ecopitico.xcdatamodeld */,
 				444A53C328CFA9FF00DABE4E /* UIView+Preview.swift */,
 				444A53C228CFA9FF00DABE4E /* UIViewController+Preview.swift */,
-				444A53C628CFD50600DABE4E /* HomeViewController.swift */,
 			);
 			path = Ecopitico;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				444A53B628CFA79C00DABE4E /* Ecopitico.xcdatamodeld in Sources */,
 				444A53C928CFD58400DABE4E /* SearchViewController.swift in Sources */,
 				444A53C428CFA9FF00DABE4E /* UIViewController+Preview.swift in Sources */,
+				309F5A9428D10DBC00E35EBF /* GroupsViewController.swift in Sources */,
 				444A53AC28CFA79C00DABE4E /* AppDelegate.swift in Sources */,
 				444A53AE28CFA79C00DABE4E /* SceneDelegate.swift in Sources */,
 				444A53CB28CFD5C700DABE4E /* ProfileViewController.swift in Sources */,

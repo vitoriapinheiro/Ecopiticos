@@ -11,13 +11,15 @@ class MyTabBarController: UITabBarController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTabBarController()
+        navigationController?.navigationBar.prefersLargeTitles = true 
     }
     private func setupTabBarController(){
         let home = UINavigationController(rootViewController: HomeViewController())
         let search = UINavigationController(rootViewController: SearchViewController())
         let profile = UINavigationController(rootViewController: ProfileViewController())
+        let testeSofia = UINavigationController(rootViewController: GroupsViewController())
         
-        self.setViewControllers([home, search, profile], animated: false)
+        self.setViewControllers([home, search, profile, testeSofia], animated: false)
         self.tabBar.backgroundColor = .white
         self.tabBar.isTranslucent = false
         
@@ -29,6 +31,8 @@ class MyTabBarController: UITabBarController{
         items[1].title = "Explorar"
         items[2].image = UIImage(systemName: "person")
         items[2].title = "Perfil"
+        items[3].title = "Teste Sofia"
+        items[3].image = UIImage(systemName: "lock.doc")
         self.tabBar.tintColor = UIColor(named: "EcoGreen")
         tabBar.layer.shadowOffset = CGSize(width: 0, height: -0.5)
                 tabBar.layer.shadowRadius = 0
@@ -39,16 +43,4 @@ class MyTabBarController: UITabBarController{
 }
 
 // MARK: - Preview
-#if DEBUG
-import SwiftUI
 
-@available(iOS 13, *)
-struct View_Preview: PreviewProvider {
-    static var previews: some View {
-        Group {
-            MyTabBarController().showPreview().previewDevice("iPhone 13")
-            MyTabBarController().showPreview().previewDevice("iPhone 13").previewInterfaceOrientation(.landscapeLeft)
-        }
-    }
-}
-#endif
