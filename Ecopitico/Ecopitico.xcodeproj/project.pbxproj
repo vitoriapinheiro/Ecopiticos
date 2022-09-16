@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4416F85C28D3C3C900187540 /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4416F85B28D3C3C900187540 /* Problem.swift */; };
 		444A53AC28CFA79C00DABE4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53AB28CFA79C00DABE4E /* AppDelegate.swift */; };
 		444A53AE28CFA79C00DABE4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53AD28CFA79C00DABE4E /* SceneDelegate.swift */; };
 		444A53B028CFA79C00DABE4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53AF28CFA79C00DABE4E /* ViewController.swift */; };
@@ -18,9 +19,11 @@
 		444A53C728CFD50600DABE4E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53C628CFD50600DABE4E /* HomeViewController.swift */; };
 		444A53C928CFD58400DABE4E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53C828CFD58400DABE4E /* SearchViewController.swift */; };
 		444A53CB28CFD5C700DABE4E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53CA28CFD5C700DABE4E /* ProfileViewController.swift */; };
+		445C276728D25F9000F65117 /* ProblemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445C276628D25F9000F65117 /* ProblemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4416F85B28D3C3C900187540 /* Problem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
 		444A53A828CFA79C00DABE4E /* Ecopitico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ecopitico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		444A53AB28CFA79C00DABE4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		444A53AD28CFA79C00DABE4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		444A53C628CFD50600DABE4E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		444A53C828CFD58400DABE4E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		444A53CA28CFD5C700DABE4E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		445C276628D25F9000F65117 /* ProblemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4416F85A28D3C37B00187540 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				444A53AF28CFA79C00DABE4E /* ViewController.swift */,
+				444A53C828CFD58400DABE4E /* SearchViewController.swift */,
+				444A53CA28CFD5C700DABE4E /* ProfileViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		444A539F28CFA79C00DABE4E = {
 			isa = PBXGroup;
 			children = (
@@ -67,10 +81,10 @@
 			isa = PBXGroup;
 			children = (
 				444A53AB28CFA79C00DABE4E /* AppDelegate.swift */,
+				4416F85B28D3C3C900187540 /* Problem.swift */,
+				4416F85A28D3C37B00187540 /* ViewControllers */,
 				444A53AD28CFA79C00DABE4E /* SceneDelegate.swift */,
-				444A53AF28CFA79C00DABE4E /* ViewController.swift */,
-				444A53CA28CFD5C700DABE4E /* ProfileViewController.swift */,
-				444A53C828CFD58400DABE4E /* SearchViewController.swift */,
+				445C276628D25F9000F65117 /* ProblemCell.swift */,
 				444A53B728CFA79F00DABE4E /* Assets.xcassets */,
 				444A53B928CFA79F00DABE4E /* LaunchScreen.storyboard */,
 				444A53BC28CFA79F00DABE4E /* Info.plist */,
@@ -154,6 +168,8 @@
 			files = (
 				444A53B028CFA79C00DABE4E /* ViewController.swift in Sources */,
 				444A53B628CFA79C00DABE4E /* Ecopitico.xcdatamodeld in Sources */,
+				4416F85C28D3C3C900187540 /* Problem.swift in Sources */,
+				445C276728D25F9000F65117 /* ProblemCell.swift in Sources */,
 				444A53C928CFD58400DABE4E /* SearchViewController.swift in Sources */,
 				444A53C428CFA9FF00DABE4E /* UIViewController+Preview.swift in Sources */,
 				444A53AC28CFA79C00DABE4E /* AppDelegate.swift in Sources */,
