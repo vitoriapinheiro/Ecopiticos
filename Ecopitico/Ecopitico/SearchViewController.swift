@@ -28,11 +28,17 @@ class SearchViewController: UIViewController {
         s.searchResultsUpdater = self
         
         s.obscuresBackgroundDuringPresentation = false
-        s.searchBar.placeholder = "Busque por problemas"
+        s.searchBar.placeholder = "Explore"
         s.searchBar.sizeToFit()
         s.searchBar.searchBarStyle = .prominent
+        s.searchBar.showsScopeBar = true
+        s.searchBar.setShowsScope(true, animated: true)
         
-        s.searchBar.scopeButtonTitles = ["Grupos", "Problemas", "Propostas"]
+        
+        s.searchBar.scopeButtonTitles = ["All", "Grupos", "Problemas", "Propostas"]
+        s.searchBar.barTintColor = UIColor(named: "EcoDarkGreen")
+        s.searchBar.tintColor = UIColor(named: "EcoGreen")
+        
         s.searchBar.delegate = self
         
         return s
@@ -46,9 +52,9 @@ class SearchViewController: UIViewController {
         setupElements()
     }
     
-    func filterContentForSearchText(searchText: String, scope: String = "Grupos"){
+    func filterContentForSearchText(searchText: String, scope: String){
         filteredProblems = problems.filter({(problem: Problem) -> Bool in
-            let doesCategoryMatch = (scope == "Grupos") || (problem.type == scope)
+            let doesCategoryMatch = (problem.type == scope)
             if isSearchBarEmpty() {
                 return doesCategoryMatch
             } else {
@@ -72,6 +78,7 @@ class SearchViewController: UIViewController {
     extension SearchViewController: UISearchBarDelegate {
         
         func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+
             filterContentForSearchText(searchText: searchBar.text!, scope: searchBar.scopeButtonTitles! [selectedScope])
         }
         
@@ -129,7 +136,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+//    func searchController(){
+//        //What am I supposed to insert here?
+//    }
 }
+
 
 extension SearchViewController{
     func setupElements(){
