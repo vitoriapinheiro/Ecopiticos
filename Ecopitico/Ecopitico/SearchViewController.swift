@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UISearchControllerDelegate {
     
     var filteredProblems = [Problem]()
     let problems = Problem.GetAllProblems()
@@ -34,10 +34,24 @@ class SearchViewController: UIViewController {
         s.searchBar.showsScopeBar = true
         s.searchBar.setShowsScope(true, animated: true)
         
-        
         s.searchBar.scopeButtonTitles = ["All", "Grupos", "Problemas", "Propostas"]
         s.searchBar.barTintColor = UIColor(named: "EcoDarkGreen")
         s.searchBar.tintColor = UIColor(named: "EcoGreen")
+        
+        let font = UIFont.systemFont(ofSize: 72)
+        let shadow = NSShadow()
+        shadow.shadowColor = UIColor.red
+        shadow.shadowBlurRadius = 5
+        let myColor = UIColor(named: "EcoGreen")
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: font,
+            .foregroundColor: UIColor.white,
+            .shadow: shadow,
+            .backgroundColor: myColor ?? .black
+        ]
+        
+        s.searchBar.setScopeBarButtonTitleTextAttributes(attributes, for: .normal)
+        
         
         s.searchBar.delegate = self
         
@@ -50,6 +64,27 @@ class SearchViewController: UIViewController {
         navigationItem.searchController = searchController
         
         setupElements()
+    }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+////        if searchController.canBecomeFirstResponder {
+//        searchController.becomeFirstResponder()
+////        }
+//    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        searchController.isActive = true
+    }
+
+    // 2. ->> UISearchControllerDelegate
+    func didPresentSearchController(_ searchController: UISearchController) {
+
+        DispatchQueue.main.async {
+            searchController.searchBar.becomeFirstResponder()
+        }
     }
     
     func filterContentForSearchText(searchText: String, scope: String){
