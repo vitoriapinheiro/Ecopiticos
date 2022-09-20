@@ -8,6 +8,12 @@
 import UIKit
 
 class testeSofia2ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    let scrollView : UIScrollView = {
+        let sv = UIScrollView()
+        
+        return sv
+    }()
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
     }
@@ -19,12 +25,13 @@ class testeSofia2ViewController: UIViewController, UICollectionViewDelegate, UIC
     }
 
 // MARK: - Inicialização dos componentes
-    let scrollView = UIScrollView()
+//    let scrollView = UIScrollView()
     let firstImage = UIImageView()
     let propostaNameLabel = UILabel()
-    let fotoPolítico = UIImageView()
+    let fotoPolitico = UIImageView()
+    let nomePolitico = UILabel()
     let descricaoProposta = UILabel()
-    let propostaIntegra = UIButton()
+    let propostaIntegra = UIButton(configuration: .filled())
     let problemasAssociados = UILabel()
     let problemasAssociadosView: UICollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())
     
@@ -34,19 +41,26 @@ class testeSofia2ViewController: UIViewController, UICollectionViewDelegate, UIC
         self.view.backgroundColor = UIColor(named: "EcoWhite")
         problemasAssociadosView.delegate = self
         problemasAssociadosView.dataSource = self
-        
+
         setupViewsAttributes()
         setupViewsHierarchy ()
         setupConstraints()
+
     }
     
     func setupViewsHierarchy() {
         // MARK: - Setup na hierarquia das subviews
         view.addSubview(scrollView)
+
         scrollView.addSubview(self.firstImage)
         scrollView.addSubview(self.propostaNameLabel)
-        
-        
+        scrollView.addSubview(self.fotoPolitico)
+        scrollView.addSubview(self.nomePolitico)
+        scrollView.addSubview(self.descricaoProposta)
+        scrollView.addSubview(self.propostaIntegra)
+        scrollView.addSubview(self.problemasAssociados)
+        scrollView.addSubview(self.problemasAssociadosView)
+
     }
     
     func setupViewsAttributes(){
@@ -54,13 +68,47 @@ class testeSofia2ViewController: UIViewController, UICollectionViewDelegate, UIC
         firstImage.image = UIImage(named: "imagemproposta1")
         firstImage.contentMode = .scaleToFill
         
-        // Configura a label do nome
+        
+        // Configura a label do nome da proposta
         propostaNameLabel.translatesAutoresizingMaskIntoConstraints = false
         propostaNameLabel.text = "Limpeza do Rio Capibaribe"
         propostaNameLabel.font = UIFont.boldSystemFont(ofSize: 32)
         propostaNameLabel.textColor = UIColor(named: "EcoGreen")
         propostaNameLabel.textAlignment = .left
         propostaNameLabel.numberOfLines = 0
+        
+        // Configura a imagem do político
+        fotoPolitico.image = UIImage(named: "imagemproposta1")
+        fotoPolitico.contentMode = .scaleToFill
+        
+        // Configura a label com informações sobre o político
+        nomePolitico.translatesAutoresizingMaskIntoConstraints = false
+        nomePolitico.text = "Por A. da Silva, vereador do Partido Maneiro"
+        nomePolitico.font = UIFont.systemFont(ofSize: 14)
+        nomePolitico.textColor = UIColor(named: "EcoDarkgrey")
+        nomePolitico.textAlignment = .left
+        nomePolitico.numberOfLines = 0
+        
+        // Configura a label da descrição
+        descricaoProposta.translatesAutoresizingMaskIntoConstraints = false
+        descricaoProposta.text = "A ação Limpeza no Cabibaribe faz parte de uma iniciativa que nasceu da parceria Partido Maneiro e 50 barqueiros e pescadores de Recife. Com a proposta de conscientizacao local e incentivo à participação na vida ambiental."
+        descricaoProposta.font = UIFont.systemFont(ofSize: 14)
+        descricaoProposta.textColor = UIColor(named: "EcoDarkgrey")
+        descricaoProposta.textAlignment = .left
+        descricaoProposta.numberOfLines = 0
+        
+        // Configura o botão de ver na íntegra
+        propostaIntegra.setTitle("Leia a proposta na íntegra!", for: .normal)
+        propostaIntegra.setTitleColor(.systemBackground, for: .normal)
+        propostaIntegra.tintColor = UIColor(named: "EcoLightGreen")
+        
+        // Configura a label do nome dos problemas associados
+        problemasAssociados.translatesAutoresizingMaskIntoConstraints = false
+        problemasAssociados.text = "Problemas Associados"
+        problemasAssociados.font = UIFont.boldSystemFont(ofSize: 24)
+        problemasAssociados.textColor = UIColor(named: "EcoGreen")
+        problemasAssociados.textAlignment = .left
+        problemasAssociados.numberOfLines = 0
         
         // Configura a collection view dos problemas
         problemasAssociadosView.backgroundColor = UIColor(named: "EcoWhite")
@@ -81,8 +129,7 @@ class testeSofia2ViewController: UIViewController, UICollectionViewDelegate, UIC
         scrollView.topAnchor.constraint(equalTo: view.topAnchor),
         scrollView.rightAnchor.constraint(equalTo: view.rightAnchor),
         scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-        scrollView.leftAnchor.constraint(equalTo: view.leftAnchor),
-        scrollView.widthAnchor.constraint(equalTo: view.widthAnchor)
+        scrollView.leftAnchor.constraint(equalTo: view.leftAnchor)
             ])
         
         // Primeira imagem
@@ -94,21 +141,60 @@ class testeSofia2ViewController: UIViewController, UICollectionViewDelegate, UIC
         firstImage.heightAnchor.constraint(equalToConstant: 242.24)
         ])
         
-        // Label do nome
+        // Label do nome da proposta
         propostaNameLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-        propostaNameLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 354),
-        propostaNameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20),
-        propostaNameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-        propostaNameLabel.heightAnchor.constraint(equalToConstant: 88)
+        propostaNameLabel.topAnchor.constraint(equalTo: firstImage.bottomAnchor, constant: 24),
+        propostaNameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+        propostaNameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
         ])
         
-        // CollectionView dos problemas
+        // Imagem do político
+        fotoPolitico.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        fotoPolitico.topAnchor.constraint(equalTo: propostaNameLabel.bottomAnchor, constant: 24),
+        fotoPolitico.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -306),
+        fotoPolitico.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+        fotoPolitico.heightAnchor.constraint(equalToConstant: 47)
+        ])
+        
+        // Label nome do político
+        nomePolitico.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        nomePolitico.topAnchor.constraint(equalTo: propostaNameLabel.bottomAnchor, constant: 24),
+        nomePolitico.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
+        nomePolitico.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100)
+        ])
+        
+        // Label descrição da proposta
+        descricaoProposta.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            descricaoProposta.topAnchor.constraint(equalTo: fotoPolitico.bottomAnchor, constant: 24),
+            descricaoProposta.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            descricaoProposta.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
+        ])
+        
+        // Botão ver proposta na íntegra
+        propostaIntegra.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            propostaIntegra.heightAnchor.constraint(equalToConstant: 45),
+            propostaIntegra.topAnchor.constraint(equalTo: descricaoProposta.bottomAnchor, constant: 15),
+            propostaIntegra.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
+            propostaIntegra.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50)
+        ])
+        
+        // Label problemas associados
+        problemasAssociados.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            problemasAssociados.topAnchor.constraint(equalTo: propostaIntegra.bottomAnchor, constant: 24),
+            problemasAssociados.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+        ])
+        
+        // CollectionView dos problemas associados
         problemasAssociadosView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            self.problemasAssociadosView.topAnchor.constraint(equalTo: view.topAnchor, constant: 814),
+            self.problemasAssociadosView.topAnchor.constraint(equalTo: self.problemasAssociados.bottomAnchor, constant: 24),
             self.problemasAssociadosView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            self.problemasAssociadosView.heightAnchor.constraint(equalToConstant: 146)
         ])
     }
 
