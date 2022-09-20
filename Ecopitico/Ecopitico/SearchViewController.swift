@@ -34,24 +34,21 @@ class SearchViewController: UIViewController, UISearchControllerDelegate {
         s.searchBar.showsScopeBar = true
         s.searchBar.setShowsScope(true, animated: true)
         
-        s.searchBar.scopeButtonTitles = ["All", "Grupos", "Problemas", "Propostas"]
+        s.searchBar.scopeButtonTitles = ["Todos", "Grupos", "Problemas", "Propostas"]
         s.searchBar.barTintColor = UIColor(named: "EcoDarkGreen")
         s.searchBar.tintColor = UIColor(named: "EcoGreen")
         
-        let font = UIFont.systemFont(ofSize: 72)
-        let shadow = NSShadow()
-        shadow.shadowColor = UIColor.red
-        shadow.shadowBlurRadius = 5
-        let myColor = UIColor(named: "EcoGreen")
+        let font = UIFont.systemFont(ofSize: 14)
+        let darkGreen = UIColor(named: "EcoDarkGreen")
+        let lightGreen = UIColor(named: "EcoGreen")
+
         let attributes: [NSAttributedString.Key: Any] = [
             .font: font,
-            .foregroundColor: UIColor.white,
-            .shadow: shadow,
-            .backgroundColor: myColor ?? .black
+            .foregroundColor: darkGreen ?? .black,
+            .tracking: lightGreen ?? .black
         ]
         
         s.searchBar.setScopeBarButtonTitleTextAttributes(attributes, for: .normal)
-        
         
         s.searchBar.delegate = self
         
