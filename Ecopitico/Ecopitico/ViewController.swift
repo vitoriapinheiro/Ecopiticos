@@ -15,7 +15,7 @@ class MyTabBarController: UITabBarController{
     private func setupTabBarController(){
         let home = UINavigationController(rootViewController: HomeViewController())
         let search = UINavigationController(rootViewController: SearchViewController())
-        let profile = UINavigationController(rootViewController: ProfileViewController())
+        let profile = UINavigationController(rootViewController: MyProfileViewController())
         
         self.setViewControllers([home, search, profile], animated: false)
         self.tabBar.backgroundColor = .white
@@ -37,6 +37,7 @@ class MyTabBarController: UITabBarController{
     }
     
 }
+
 
 // MARK: - Preview
 #if DEBUG
