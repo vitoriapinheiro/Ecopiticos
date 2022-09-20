@@ -38,12 +38,12 @@ class SearchViewController: UIViewController, UISearchControllerDelegate {
         s.searchBar.barTintColor = UIColor(named: "EcoDarkGreen")
         s.searchBar.tintColor = UIColor(named: "EcoGreen")
         
-        let font = UIFont.systemFont(ofSize: 14)
+        let font = UIFont(name: "Nunito-Medium", size: 14)
         let darkGreen = UIColor(named: "EcoDarkGreen")
         let lightGreen = UIColor(named: "EcoGreen")
 
         let attributes: [NSAttributedString.Key: Any] = [
-            .font: font,
+            .font: font ?? .systemFont(ofSize: 14),
             .foregroundColor: darkGreen ?? .black,
             .tracking: lightGreen ?? .black
         ]
@@ -63,13 +63,6 @@ class SearchViewController: UIViewController, UISearchControllerDelegate {
         setupElements()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-////        if searchController.canBecomeFirstResponder {
-//        searchController.becomeFirstResponder()
-////        }
-//    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
@@ -84,9 +77,9 @@ class SearchViewController: UIViewController, UISearchControllerDelegate {
         }
     }
     
-    func filterContentForSearchText(searchText: String, scope: String){
+    func filterContentForSearchText(searchText: String, scope: String = "Todos"){
         filteredProblems = problems.filter({(problem: Problem) -> Bool in
-            let doesCategoryMatch = (problem.type == scope)
+            let doesCategoryMatch = (scope == "Todos") || (problem.type == scope)
             if isSearchBarEmpty() {
                 return doesCategoryMatch
             } else {
@@ -142,7 +135,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 120
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -163,15 +156,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             currentProblem = problems[indexPath.row]
         }
         
-        cell.nameLbl.text = currentProblem.name
-        cell.placeLbl.text = currentProblem.type
+        cell.title.text = currentProblem.name
+        cell.subtitle.text = currentProblem.type
+        cell.img.image = UIImage(named: currentProblem.img)
         
         return cell
     }
-    
-//    func searchController(){
-//        //What am I supposed to insert here?
-//    }
 }
 
 
@@ -181,8 +171,8 @@ extension SearchViewController{
         
         tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
 
     }
 }

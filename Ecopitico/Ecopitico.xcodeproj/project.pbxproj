@@ -14,11 +14,10 @@
 		444A53B628CFA79C00DABE4E /* Ecopitico.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 444A53B428CFA79C00DABE4E /* Ecopitico.xcdatamodeld */; };
 		444A53B828CFA79F00DABE4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 444A53B728CFA79F00DABE4E /* Assets.xcassets */; };
 		444A53BB28CFA79F00DABE4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 444A53B928CFA79F00DABE4E /* LaunchScreen.storyboard */; };
-		444A53C428CFA9FF00DABE4E /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53C228CFA9FF00DABE4E /* UIViewController+Preview.swift */; };
-		444A53C528CFA9FF00DABE4E /* UIView+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53C328CFA9FF00DABE4E /* UIView+Preview.swift */; };
 		444A53C728CFD50600DABE4E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53C628CFD50600DABE4E /* HomeViewController.swift */; };
 		444A53C928CFD58400DABE4E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53C828CFD58400DABE4E /* SearchViewController.swift */; };
 		444A53CB28CFD5C700DABE4E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53CA28CFD5C700DABE4E /* ProfileViewController.swift */; };
+		444C82AB28DA474D00C5DA2A /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 444C82AA28DA474D00C5DA2A /* Nunito-Light.ttf */; };
 		445C276728D25F9000F65117 /* ProblemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445C276628D25F9000F65117 /* ProblemCell.swift */; };
 		5B03C5CA28D1135B00F17929 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03C5C928D1135B00F17929 /* DemoViewController.swift */; };
 		5B03C5CC28D1169E00F17929 /* OnboardingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03C5CB28D1169E00F17929 /* OnboardingInfo.swift */; };
@@ -37,11 +36,10 @@
 		444A53B728CFA79F00DABE4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		444A53BA28CFA79F00DABE4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		444A53BC28CFA79F00DABE4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		444A53C228CFA9FF00DABE4E /* UIViewController+Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
-		444A53C328CFA9FF00DABE4E /* UIView+Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
 		444A53C628CFD50600DABE4E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		444A53C828CFD58400DABE4E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		444A53CA28CFD5C700DABE4E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		444C82AA28DA474D00C5DA2A /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
 		445C276628D25F9000F65117 /* ProblemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemCell.swift; sourceTree = "<group>"; };
 		5B03C5C928D1135B00F17929 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		5B03C5CB28D1169E00F17929 /* OnboardingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInfo.swift; sourceTree = "<group>"; };
@@ -64,8 +62,11 @@
 		4416F85A28D3C37B00187540 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5B42B75328D418E6009C23B4 /* OnboardPagingViewController.swift */,
+				5B03C5C928D1135B00F17929 /* DemoViewController.swift */,
 				444A53AF28CFA79C00DABE4E /* ViewController.swift */,
 				444A53C828CFD58400DABE4E /* SearchViewController.swift */,
+				444A53C628CFD50600DABE4E /* HomeViewController.swift */,
 				444A53CA28CFD5C700DABE4E /* ProfileViewController.swift */,
 			);
 			name = ViewControllers;
@@ -90,28 +91,53 @@
 		444A53AA28CFA79C00DABE4E /* Ecopitico */ = {
 			isa = PBXGroup;
 			children = (
-				444A53AB28CFA79C00DABE4E /* AppDelegate.swift */,
-				4416F85B28D3C3C900187540 /* Problem.swift */,
+				444C82AF28DA505C00C5DA2A /* Delegate */,
 				4416F85A28D3C37B00187540 /* ViewControllers */,
-				444A53AD28CFA79C00DABE4E /* SceneDelegate.swift */,
-				445C276628D25F9000F65117 /* ProblemCell.swift */,
-				5B42B77B28D4FDA9009C23B4 /* Nunito-Medium.ttf */,
-				5B42B77928D4F640009C23B4 /* Nunito-ExtraBold.ttf */,
-				444A53AF28CFA79C00DABE4E /* ViewController.swift */,
-				444A53CA28CFD5C700DABE4E /* ProfileViewController.swift */,
-				444A53C628CFD50600DABE4E /* HomeViewController.swift */,
-				444A53C828CFD58400DABE4E /* SearchViewController.swift */,
+				444C82AE28DA503D00C5DA2A /* Views */,
+				444C82AC28DA476500C5DA2A /* Fonts */,
 				444A53B728CFA79F00DABE4E /* Assets.xcassets */,
 				444A53B928CFA79F00DABE4E /* LaunchScreen.storyboard */,
 				444A53BC28CFA79F00DABE4E /* Info.plist */,
 				444A53B428CFA79C00DABE4E /* Ecopitico.xcdatamodeld */,
-				444A53C328CFA9FF00DABE4E /* UIView+Preview.swift */,
-				444A53C228CFA9FF00DABE4E /* UIViewController+Preview.swift */,
-				5B42B75328D418E6009C23B4 /* OnboardPagingViewController.swift */,
-				5B03C5C928D1135B00F17929 /* DemoViewController.swift */,
-				5B03C5CB28D1169E00F17929 /* OnboardingInfo.swift */,
+				444C82AD28DA501A00C5DA2A /* Models */,
 			);
 			path = Ecopitico;
+			sourceTree = "<group>";
+		};
+		444C82AC28DA476500C5DA2A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				444C82AA28DA474D00C5DA2A /* Nunito-Light.ttf */,
+				5B42B77B28D4FDA9009C23B4 /* Nunito-Medium.ttf */,
+				5B42B77928D4F640009C23B4 /* Nunito-ExtraBold.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		444C82AD28DA501A00C5DA2A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4416F85B28D3C3C900187540 /* Problem.swift */,
+				5B03C5CB28D1169E00F17929 /* OnboardingInfo.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		444C82AE28DA503D00C5DA2A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				445C276628D25F9000F65117 /* ProblemCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		444C82AF28DA505C00C5DA2A /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				444A53AD28CFA79C00DABE4E /* SceneDelegate.swift */,
+				444A53AB28CFA79C00DABE4E /* AppDelegate.swift */,
+			);
+			name = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B42B77C28D4FDA9009C23B4 /* Nunito-Medium.ttf in Resources */,
+				444C82AB28DA474D00C5DA2A /* Nunito-Light.ttf in Resources */,
 				5B42B77A28D4F641009C23B4 /* Nunito-ExtraBold.ttf in Resources */,
 				444A53BB28CFA79F00DABE4E /* LaunchScreen.storyboard in Resources */,
 				444A53B828CFA79F00DABE4E /* Assets.xcassets in Resources */,
@@ -191,7 +218,6 @@
 				4416F85C28D3C3C900187540 /* Problem.swift in Sources */,
 				445C276728D25F9000F65117 /* ProblemCell.swift in Sources */,
 				444A53C928CFD58400DABE4E /* SearchViewController.swift in Sources */,
-				444A53C428CFA9FF00DABE4E /* UIViewController+Preview.swift in Sources */,
 				444A53AC28CFA79C00DABE4E /* AppDelegate.swift in Sources */,
 				5B03C5CC28D1169E00F17929 /* OnboardingInfo.swift in Sources */,
 				5B42B75428D418E6009C23B4 /* OnboardPagingViewController.swift in Sources */,
@@ -199,7 +225,6 @@
 				444A53CB28CFD5C700DABE4E /* ProfileViewController.swift in Sources */,
 				5B03C5CA28D1135B00F17929 /* DemoViewController.swift in Sources */,
 				444A53C728CFD50600DABE4E /* HomeViewController.swift in Sources */,
-				444A53C528CFA9FF00DABE4E /* UIView+Preview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
