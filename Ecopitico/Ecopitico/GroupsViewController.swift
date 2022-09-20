@@ -81,6 +81,7 @@ class GroupsViewController: UIViewController, UICollectionViewDelegate, UICollec
         groupNameLabel.textColor = UIColor(named: "EcoGreen")
         groupNameLabel.textAlignment = .left
         groupNameLabel.numberOfLines = 0
+        groupNameLabel.contentMode = .scaleAspectFit
         
         // Configura o botão de favoritar
         botaoFavoritar.setImage(UIImage(systemName: "heart"), for: .normal)
@@ -106,8 +107,13 @@ class GroupsViewController: UIViewController, UICollectionViewDelegate, UICollec
         fotosView.setCollectionViewLayout(layout, animated: false)
         
         // Configura o segmented control das informações extras
+        outrasInformacoes.selectedSegmentIndex = 0
+        outrasInformacoes.frame = CGRect(x: 10, y: 150, width: 300, height: 20)
         outrasInformacoes.tintColor = UIColor(named: "EcoGreen")
-        //outrasInformacoes.frame = CGRect(x: 0, y: 0, width: 48, height: 22)
+        
+                                              
+
+        
     }
     
     func setupConstraints() {
@@ -118,9 +124,8 @@ class GroupsViewController: UIViewController, UICollectionViewDelegate, UICollec
         NSLayoutConstraint.activate([
           scrollView.topAnchor.constraint(equalTo: view.topAnchor),
           scrollView.rightAnchor.constraint(equalTo: view.rightAnchor),
-          scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-          scrollView.leftAnchor.constraint(equalTo: view.leftAnchor),
-          scrollView.widthAnchor.constraint(equalTo: view.widthAnchor)
+          scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+          scrollView.leftAnchor.constraint(equalTo: view.leftAnchor)
         ])
         
         // Stack view
