@@ -38,17 +38,3 @@ class MyTabBarController: UITabBarController{
     
 }
 
-// MARK: - Preview
-#if DEBUG
-import SwiftUI
-
-@available(iOS 13, *)
-struct View_Preview: PreviewProvider {
-    static var previews: some View {
-        Group {
-            MyTabBarController().showPreview().previewDevice("iPhone 13")
-            MyTabBarController().showPreview().previewDevice("iPhone 13").previewInterfaceOrientation(.landscapeLeft)
-        }
-    }
-}
-#endif
