@@ -11,21 +11,27 @@ class testeSofia2ViewController: UIViewController, UICollectionViewDelegate, UIC
     
     let scrollView : UIScrollView = {
         let sv = UIScrollView()
-        
+        sv.translatesAutoresizingMaskIntoConstraints = false
         return sv
     }()
+    
+    let contentView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "problemasCell", for: indexPath)
+        let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "fotosCell", for: indexPath)
         myCell.backgroundColor = .blue
         return myCell
     }
-
-// MARK: - Inicialização dos componentes
-//    let scrollView = UIScrollView()
+    
+    // MARK: - Inicialização dos componentes
     let firstImage = UIImageView()
     let propostaNameLabel = UILabel()
     let fotoPolitico = UIImageView()
@@ -41,26 +47,26 @@ class testeSofia2ViewController: UIViewController, UICollectionViewDelegate, UIC
         self.view.backgroundColor = UIColor(named: "EcoWhite")
         problemasAssociadosView.delegate = self
         problemasAssociadosView.dataSource = self
-
+        
         setupViewsAttributes()
         setupViewsHierarchy ()
         setupConstraints()
-
+        
     }
     
     func setupViewsHierarchy() {
         // MARK: - Setup na hierarquia das subviews
         view.addSubview(scrollView)
-
-        scrollView.addSubview(self.firstImage)
-        scrollView.addSubview(self.propostaNameLabel)
-        scrollView.addSubview(self.fotoPolitico)
-        scrollView.addSubview(self.nomePolitico)
-        scrollView.addSubview(self.descricaoProposta)
-        scrollView.addSubview(self.propostaIntegra)
-        scrollView.addSubview(self.problemasAssociados)
-        scrollView.addSubview(self.problemasAssociadosView)
-
+        
+        scrollView.addSubview(contentView)
+        contentView.addSubview(self.firstImage)
+        contentView.addSubview(self.propostaNameLabel)
+        contentView.addSubview(self.fotoPolitico)
+        contentView.addSubview(self.nomePolitico)
+        contentView.addSubview(self.descricaoProposta)
+        contentView.addSubview(self.propostaIntegra)
+        contentView.addSubview(self.problemasAssociados)
+        contentView.addSubview(self.problemasAssociadosView)
     }
     
     func setupViewsAttributes(){
@@ -78,12 +84,12 @@ class testeSofia2ViewController: UIViewController, UICollectionViewDelegate, UIC
         propostaNameLabel.numberOfLines = 0
         
         // Configura a imagem do político
-        fotoPolitico.image = UIImage(named: "imagemproposta1")
-        fotoPolitico.contentMode = .scaleToFill
+        fotoPolitico.image = UIImage(named: "imgplt")
+        fotoPolitico.contentMode = .scaleAspectFit
         
         // Configura a label com informações sobre o político
         nomePolitico.translatesAutoresizingMaskIntoConstraints = false
-        nomePolitico.text = "Por A. da Silva, vereador do Partido Maneiro"
+        nomePolitico.text = "Por A. da Silva, vereadora do Partido Maneiro"
         nomePolitico.font = UIFont.systemFont(ofSize: 14)
         nomePolitico.textColor = UIColor(named: "EcoDarkgrey")
         nomePolitico.textAlignment = .left
@@ -112,66 +118,73 @@ class testeSofia2ViewController: UIViewController, UICollectionViewDelegate, UIC
         
         // Configura a collection view dos problemas
         problemasAssociadosView.backgroundColor = UIColor(named: "EcoWhite")
-        problemasAssociadosView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "problemasCell")
-                var layout = UICollectionViewFlowLayout()
-                layout = UICollectionViewFlowLayout()
-                layout.itemSize = CGSize(width: 100, height: 100)
-                layout.scrollDirection = .horizontal
-                problemasAssociadosView.setCollectionViewLayout(layout, animated: false)
-                
+        problemasAssociadosView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "fotosCell")
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 200, height: 200)
+        layout.scrollDirection = .horizontal
+        problemasAssociadosView.setCollectionViewLayout(layout, animated: false)
+        
     }
     
     func setupConstraints(){
         
         // Scroll view
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-        scrollView.topAnchor.constraint(equalTo: view.topAnchor),
-        scrollView.rightAnchor.constraint(equalTo: view.rightAnchor),
-        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-        scrollView.leftAnchor.constraint(equalTo: view.leftAnchor)
-            ])
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            scrollView.leftAnchor.constraint(equalTo: view.leftAnchor)
+        ])
+        
+        // content view
+        NSLayoutConstraint.activate([
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+        ])
         
         // Primeira imagem
         firstImage.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-        firstImage.topAnchor.constraint(equalTo: view.topAnchor),
-        firstImage.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-        firstImage.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-        firstImage.heightAnchor.constraint(equalToConstant: 242.24)
+            firstImage.topAnchor.constraint(equalTo: contentView.topAnchor),
+            firstImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            firstImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            firstImage.heightAnchor.constraint(equalToConstant: 242.24)
         ])
         
         // Label do nome da proposta
         propostaNameLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-        propostaNameLabel.topAnchor.constraint(equalTo: firstImage.bottomAnchor, constant: 24),
-        propostaNameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-        propostaNameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
+            propostaNameLabel.topAnchor.constraint(equalTo: firstImage.bottomAnchor, constant: 24),
+            propostaNameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            propostaNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
         ])
         
         // Imagem do político
         fotoPolitico.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-        fotoPolitico.topAnchor.constraint(equalTo: propostaNameLabel.bottomAnchor, constant: 24),
-        fotoPolitico.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -306),
-        fotoPolitico.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-        fotoPolitico.heightAnchor.constraint(equalToConstant: 47)
+            fotoPolitico.topAnchor.constraint(equalTo: propostaNameLabel.bottomAnchor, constant: 24),
+            fotoPolitico.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -306),
+            fotoPolitico.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            fotoPolitico.heightAnchor.constraint(equalToConstant: 40)
         ])
         
         // Label nome do político
         nomePolitico.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-        nomePolitico.topAnchor.constraint(equalTo: propostaNameLabel.bottomAnchor, constant: 24),
-        nomePolitico.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-        nomePolitico.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100)
+            nomePolitico.topAnchor.constraint(equalTo: propostaNameLabel.bottomAnchor, constant: 24),
+            nomePolitico.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -50),
+            nomePolitico.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 100)
         ])
         
         // Label descrição da proposta
         descricaoProposta.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             descricaoProposta.topAnchor.constraint(equalTo: fotoPolitico.bottomAnchor, constant: 24),
-            descricaoProposta.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            descricaoProposta.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
+            descricaoProposta.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            descricaoProposta.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20)
         ])
         
         // Botão ver proposta na íntegra
@@ -179,35 +192,37 @@ class testeSofia2ViewController: UIViewController, UICollectionViewDelegate, UIC
         NSLayoutConstraint.activate([
             propostaIntegra.heightAnchor.constraint(equalToConstant: 45),
             propostaIntegra.topAnchor.constraint(equalTo: descricaoProposta.bottomAnchor, constant: 15),
-            propostaIntegra.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-            propostaIntegra.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50)
+            propostaIntegra.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -50),
+            propostaIntegra.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 50)
         ])
         
         // Label problemas associados
         problemasAssociados.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             problemasAssociados.topAnchor.constraint(equalTo: propostaIntegra.bottomAnchor, constant: 24),
-            problemasAssociados.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            problemasAssociados.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
         ])
         
-        // CollectionView dos problemas associados
+        // Collection View dos problemas associados
         problemasAssociadosView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             self.problemasAssociadosView.topAnchor.constraint(equalTo: self.problemasAssociados.bottomAnchor, constant: 24),
-            self.problemasAssociadosView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            self.problemasAssociadosView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            self.problemasAssociadosView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            self.problemasAssociadosView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 // MARK: - Preview
 #if DEBUG

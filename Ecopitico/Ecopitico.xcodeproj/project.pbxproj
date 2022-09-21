@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300E4AD728DB53800051B47C /* ProblemasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300E4AD628DB53800051B47C /* ProblemasCollectionViewCell.swift */; };
 		308EFFDF28D4AA7C0008A589 /* testeSofia2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EFFDE28D4AA7C0008A589 /* testeSofia2ViewController.swift */; };
 		444A53AC28CFA79C00DABE4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53AB28CFA79C00DABE4E /* AppDelegate.swift */; };
 		444A53AE28CFA79C00DABE4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53AD28CFA79C00DABE4E /* SceneDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		300E4AD628DB53800051B47C /* ProblemasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemasCollectionViewCell.swift; sourceTree = "<group>"; };
 		308EFFDE28D4AA7C0008A589 /* testeSofia2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testeSofia2ViewController.swift; sourceTree = "<group>"; };
 		444A53A828CFA79C00DABE4E /* Ecopitico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ecopitico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		444A53AB28CFA79C00DABE4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				444A53C328CFA9FF00DABE4E /* UIView+Preview.swift */,
 				444A53C228CFA9FF00DABE4E /* UIViewController+Preview.swift */,
 				444A53C628CFD50600DABE4E /* HomeViewController.swift */,
+				300E4AD628DB53800051B47C /* ProblemasCollectionViewCell.swift */,
 			);
 			path = Ecopitico;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				308EFFDF28D4AA7C0008A589 /* testeSofia2ViewController.swift in Sources */,
+				300E4AD728DB53800051B47C /* ProblemasCollectionViewCell.swift in Sources */,
 				444A53B028CFA79C00DABE4E /* ViewController.swift in Sources */,
 				444A53B628CFA79C00DABE4E /* Ecopitico.xcdatamodeld in Sources */,
 				444A53C928CFD58400DABE4E /* SearchViewController.swift in Sources */,
