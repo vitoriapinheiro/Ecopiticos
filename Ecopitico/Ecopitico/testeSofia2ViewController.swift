@@ -22,12 +22,12 @@ class testeSofia2ViewController: UIViewController, UICollectionViewDelegate, UIC
     }()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "fotosCell", for: indexPath)
-        myCell.backgroundColor = .blue
+        let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: ProblemasCollectionViewCell.identifier, for: indexPath) as! ProblemasCollectionViewCell
+        myCell.setup(tipo: indexPath.item)
         return myCell
     }
     
@@ -39,7 +39,20 @@ class testeSofia2ViewController: UIViewController, UICollectionViewDelegate, UIC
     let descricaoProposta = UILabel()
     let propostaIntegra = UIButton(configuration: .filled())
     let problemasAssociados = UILabel()
-    let problemasAssociadosView: UICollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())
+    
+    let problemasAssociadosView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+                layout.itemSize = CGSize(width: 124, height: 146)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+//        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        layout.scrollDirection = .horizontal
+        let collection = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        // Configura a collection view dos problemas
+        collection.backgroundColor = UIColor(named: "EcoWhite")
+        collection.register(ProblemasCollectionViewCell.self, forCellWithReuseIdentifier: ProblemasCollectionViewCell.identifier)
+        
+        return collection
+    }()
     
     
     override func viewDidLoad() {
@@ -115,14 +128,7 @@ class testeSofia2ViewController: UIViewController, UICollectionViewDelegate, UIC
         problemasAssociados.textColor = UIColor(named: "EcoGreen")
         problemasAssociados.textAlignment = .left
         problemasAssociados.numberOfLines = 0
-        
-        // Configura a collection view dos problemas
-        problemasAssociadosView.backgroundColor = UIColor(named: "EcoWhite")
-        problemasAssociadosView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "fotosCell")
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 200, height: 200)
-        layout.scrollDirection = .horizontal
-        problemasAssociadosView.setCollectionViewLayout(layout, animated: false)
+
         
     }
     
@@ -209,7 +215,8 @@ class testeSofia2ViewController: UIViewController, UICollectionViewDelegate, UIC
             self.problemasAssociadosView.topAnchor.constraint(equalTo: self.problemasAssociados.bottomAnchor, constant: 24),
             self.problemasAssociadosView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             self.problemasAssociadosView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            self.problemasAssociadosView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            self.problemasAssociadosView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            self.problemasAssociadosView.heightAnchor.constraint(equalToConstant: 150)
         ])
     }
     
