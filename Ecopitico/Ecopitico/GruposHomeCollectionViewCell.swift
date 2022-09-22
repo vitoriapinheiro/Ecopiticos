@@ -84,7 +84,6 @@ class GruposHomeCollectionViewCell: UICollectionViewCell {
                 groupNameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
                 groupNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
                 groupNameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-                groupNameLabel.heightAnchor.constraint(equalToConstant: 14)
             ])
             
         }

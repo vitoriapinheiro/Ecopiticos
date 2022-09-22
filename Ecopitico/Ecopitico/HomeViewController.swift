@@ -22,13 +22,37 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        if collectionView == gruposHomeView{
+            return 4
+        }
+        else if collectionView == problemasRecorrentesView{
+            return 3
+        }
+        else {
+            return 4
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: GruposHomeCollectionViewCell.identifier, for: indexPath) as! GruposHomeCollectionViewCell
-        myCell.setup(tipo: indexPath.item)
-        return myCell
+        
+        if collectionView == gruposHomeView{
+            let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: GruposHomeCollectionViewCell.identifier, for: indexPath) as! GruposHomeCollectionViewCell
+            myCell.setup(tipo: indexPath.item)
+            return myCell
+        }
+        
+        else if collectionView == problemasRecorrentesView{
+            let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: ProblemasRecorrentesCollectionViewCell.identifier, for: indexPath) as! ProblemasRecorrentesCollectionViewCell
+            myCell.setup(tipo: indexPath.item)
+            return myCell
+            
+        }
+        else {
+            let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: PropostasFamosasCollectionViewCell.identifier, for: indexPath) as! PropostasFamosasCollectionViewCell
+            myCell.setup(tipo: indexPath.item)
+            return myCell
+        }
+            
     }
     
     // MARK: - Inicialização dos componentes
@@ -36,7 +60,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     let famosinhosLabel = UILabel()
     let gruposHomeView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 118, height: 140)
+        layout.itemSize = CGSize(width: 118, height: 145)
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.scrollDirection = .horizontal
         let collection = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
@@ -47,15 +71,43 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }()
     let linhaCinza = UIImageView()
     let olhadaLabel = UILabel()
+    let problemasRecorrentesView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 118, height: 160)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.scrollDirection = .horizontal
+        let collection = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        collection.backgroundColor = UIColor(named: "EcoWhite")
+        collection.register(ProblemasRecorrentesCollectionViewCell.self, forCellWithReuseIdentifier: ProblemasRecorrentesCollectionViewCell.identifier)
+        
+        return collection
+    }()
+    let linhaCinza2 = UIImageView()
+    let propostasLabel = UILabel()
+    let propostasFamosasView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 118, height: 145)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.scrollDirection = .horizontal
+        let collection = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        collection.backgroundColor = UIColor(named: "EcoWhite")
+        collection.register(PropostasFamosasCollectionViewCell.self, forCellWithReuseIdentifier: PropostasFamosasCollectionViewCell.identifier)
+        
+        return collection
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(named: "EcoWhite")
         gruposHomeView.delegate = self
         gruposHomeView.dataSource = self
+        problemasRecorrentesView.delegate = self
+        problemasRecorrentesView.dataSource = self
+        propostasFamosasView.delegate = self
+        propostasFamosasView.dataSource = self
         
-        setupViewsAttributes()
         setupViewsHierarchy ()
+        setupViewsAttributes()
         setupConstraints()
     }
     
@@ -69,6 +121,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         contentView.addSubview(self.gruposHomeView)
         contentView.addSubview(self.linhaCinza)
         contentView.addSubview(self.olhadaLabel)
+        contentView.addSubview(self.problemasRecorrentesView)
+        contentView.addSubview(self.linhaCinza2)
+        contentView.addSubview(self.propostasLabel)
+        contentView.addSubview(self.propostasFamosasView)
+
     }
     
     func setupViewsAttributes() {
@@ -95,12 +152,27 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         // Configura a label olhada
         olhadaLabel.translatesAutoresizingMaskIntoConstraints = false
-        olhadaLabel.text = "Você já deu uma olhada"
+        olhadaLabel.text = "Problemas mais recorrentes "
         olhadaLabel.font = UIFont.boldSystemFont(ofSize: 24)
         olhadaLabel.textColor = UIColor(named: "EcoDarkgrey")
         olhadaLabel.textAlignment = .left
         olhadaLabel.numberOfLines = 0
+        
+        // Configura a segunda linha cinza entre collections
+        linhaCinza2.translatesAutoresizingMaskIntoConstraints = false
+        linhaCinza2.contentMode = .scaleAspectFill
+        linhaCinza2.image = UIImage(named: "linhacinza")
+        
+        // Configura a label das propostas
+        propostasLabel.translatesAutoresizingMaskIntoConstraints = false
+        propostasLabel.text = "As propostas mais famosas"
+        propostasLabel.font = UIFont.boldSystemFont(ofSize: 24)
+        propostasLabel.textColor = UIColor(named: "EcoDarkgrey")
+        propostasLabel.textAlignment = .left
+        propostasLabel.numberOfLines = 0
+
     }
+    
     
     func setupConstraints() {
         // Scroll view
@@ -114,8 +186,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // content view
         NSLayoutConstraint.activate([
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            contentView.rightAnchor.constraint(equalTo: scrollView.rightAnchor),
+            contentView.leftAnchor.constraint(equalTo: scrollView.leftAnchor),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
         ])
@@ -123,7 +195,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // Label ecopiticos
         firstLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            firstLabel.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 20),
+            firstLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             firstLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15)
         ])
         
@@ -134,13 +206,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             famosinhosLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15)
         ])
         
-        // Colection view problemas na home
+        // Colection view grupos na home
         gruposHomeView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             self.gruposHomeView.topAnchor.constraint(equalTo: self.famosinhosLabel.bottomAnchor, constant: 10),
             self.gruposHomeView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
             self.gruposHomeView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            self.gruposHomeView.heightAnchor.constraint(equalToConstant: 150)
+            self.gruposHomeView.heightAnchor.constraint(equalToConstant: 145)
         ])
         
         // linha cinza entre collections
@@ -156,21 +228,44 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         olhadaLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             olhadaLabel.topAnchor.constraint(equalTo: linhaCinza.bottomAnchor, constant: 22),
-            olhadaLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15)
+            olhadaLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
+        ])
+        
+        // Colection view problemas na home
+        problemasRecorrentesView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            self.problemasRecorrentesView.topAnchor.constraint(equalTo: self.olhadaLabel.bottomAnchor, constant: 10),
+            self.problemasRecorrentesView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
+            self.problemasRecorrentesView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            self.problemasRecorrentesView.heightAnchor.constraint(equalToConstant: 160),
+        ])
+        
+        // linha cinza entre collections
+        linhaCinza2.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            linhaCinza2.topAnchor.constraint(equalTo: problemasRecorrentesView.bottomAnchor, constant: 10),
+            linhaCinza2.heightAnchor.constraint(equalToConstant: 1),
+            linhaCinza2.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            linhaCinza2.leadingAnchor.constraint(equalTo: contentView.leadingAnchor)
+        ])
+        
+        // Label propostas famosas
+        propostasLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            propostasLabel.topAnchor.constraint(equalTo: linhaCinza2.bottomAnchor, constant: 22),
+            propostasLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
+        ])
+        
+        // Colection view problemas na home
+        propostasFamosasView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            self.propostasFamosasView.topAnchor.constraint(equalTo: self.propostasLabel.bottomAnchor, constant: 10),
+            self.propostasFamosasView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
+            self.propostasFamosasView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            self.propostasFamosasView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            self.propostasFamosasView.heightAnchor.constraint(equalToConstant: 145)
         ])
         
     }
-    
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
