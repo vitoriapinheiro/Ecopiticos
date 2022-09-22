@@ -11,13 +11,13 @@ extension MyProfileViewController: UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.conquistasCollectionView {
-            return makeEventCell(indexPath)
+            return makeConquistasCell(indexPath)
             
         } else if  collectionView == self.eventosCollectionView {
-            return makeFavoriteGroupCell(indexPath)
+            return makeEventCell(indexPath)
             
         } else if collectionView == self.gruposFavoritosCollectionView {
-            return makeConquistasCell(indexPath)
+            return makeFavoriteGroupCell(indexPath)
             
             
         } else{
@@ -28,7 +28,24 @@ extension MyProfileViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        
+        if collectionView == self.gruposFavoritosCollectionView{
+            return 1
+        }
+        
+        else if collectionView == self.eventosCollectionView{
+            return 0
+        }
+        
+        else if collectionView ==  self.conquistasCollectionView{
+            return 2
+        }
+        
+        else{
+            return 0
+        }
+        
+            
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -38,7 +55,7 @@ extension MyProfileViewController: UICollectionViewDelegate, UICollectionViewDat
     fileprivate func makeEventCell(_ indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = conquistasCollectionView.dequeueReusableCell(withReuseIdentifier: "conquistasCell", for: indexPath) as? ConquistasCollectionViewCell
-        cell?.configure(imagem: UIImage(named: "aguinha") ?? UIImage(), lugar: "Lugar")
+        cell?.configure(imagem: UIImage(named: "aguinha") ?? UIImage(), lugar: "")
         return cell ?? UICollectionViewCell()
         
     }
@@ -46,7 +63,7 @@ extension MyProfileViewController: UICollectionViewDelegate, UICollectionViewDat
     fileprivate func makeFavoriteGroupCell(_ indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = eventosCollectionView.dequeueReusableCell(withReuseIdentifier: "eventoCell", for: indexPath) as? EventosCollectionViewCell
-        cell?.configure(imagem: UIImage(named: "aguinha") ?? UIImage(), lugar: "Renda")
+        cell?.configure(imagem: UIImage(named: "fav-xoplastico") ?? UIImage(), lugar: "")
         return cell ?? UICollectionViewCell()
         
     }
@@ -54,7 +71,7 @@ extension MyProfileViewController: UICollectionViewDelegate, UICollectionViewDat
     fileprivate func makeConquistasCell(_ indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = gruposFavoritosCollectionView.dequeueReusableCell(withReuseIdentifier: "favoritosCell", for: indexPath) as? FavoriteGroupsCollectionViewCell
-        cell?.configure(imagem: UIImage(named: "aguinha") ?? UIImage(), lugar: "Descansar")
+        cell?.configure(imagem: UIImage(named: "aguinha") ?? UIImage(), lugar: "")
         return cell ?? UICollectionViewCell()
 
     }
