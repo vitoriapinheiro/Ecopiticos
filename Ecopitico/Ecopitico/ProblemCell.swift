@@ -14,7 +14,8 @@ class ProblemCell: UITableViewCell {
         i.translatesAutoresizingMaskIntoConstraints = false
         i.heightAnchor.constraint(equalToConstant: 98).isActive = true
         i.widthAnchor.constraint(equalToConstant: 98).isActive = true
-        
+        i.contentMode = .scaleAspectFit
+        i.layer.cornerRadius = 8
         return i
     }()
     

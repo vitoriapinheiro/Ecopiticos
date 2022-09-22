@@ -21,9 +21,16 @@
 		445C276728D25F9000F65117 /* ProblemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445C276628D25F9000F65117 /* ProblemCell.swift */; };
 		5B03C5CA28D1135B00F17929 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03C5C928D1135B00F17929 /* DemoViewController.swift */; };
 		5B03C5CC28D1169E00F17929 /* OnboardingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03C5CB28D1169E00F17929 /* OnboardingInfo.swift */; };
+		5B12DB5B28DAB5B1003E4106 /* GruposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12DB5A28DAB5B1003E4106 /* GruposViewController.swift */; };
+		5B12DB5D28DAB741003E4106 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B12DB5C28DAB741003E4106 /* Nunito-Bold.ttf */; };
+		5B25376028DB7E66006AFC66 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B25375F28DB7E66006AFC66 /* Nunito-Regular.ttf */; };
+		5B25376228DB7F33006AFC66 /* Grupo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25376128DB7F33006AFC66 /* Grupo.swift */; };
+		5B25376428DB8C7E006AFC66 /* FotosGruposCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25376328DB8C7E006AFC66 /* FotosGruposCollectionViewCell.swift */; };
+		5B25376628DB8D6C006AFC66 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B25376528DB8D6C006AFC66 /* Nunito-ExtraLight.ttf */; };
 		5B42B75428D418E6009C23B4 /* OnboardPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B42B75328D418E6009C23B4 /* OnboardPagingViewController.swift */; };
 		5B42B77A28D4F641009C23B4 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B42B77928D4F640009C23B4 /* Nunito-ExtraBold.ttf */; };
 		5B42B77C28D4FDA9009C23B4 /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B42B77B28D4FDA9009C23B4 /* Nunito-Medium.ttf */; };
+		5B73D20328DCDC86005810A4 /* ContatoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B73D20228DCDC86005810A4 /* ContatoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,9 +50,16 @@
 		445C276628D25F9000F65117 /* ProblemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemCell.swift; sourceTree = "<group>"; };
 		5B03C5C928D1135B00F17929 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		5B03C5CB28D1169E00F17929 /* OnboardingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInfo.swift; sourceTree = "<group>"; };
+		5B12DB5A28DAB5B1003E4106 /* GruposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GruposViewController.swift; sourceTree = "<group>"; };
+		5B12DB5C28DAB741003E4106 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		5B25375F28DB7E66006AFC66 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		5B25376128DB7F33006AFC66 /* Grupo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grupo.swift; sourceTree = "<group>"; };
+		5B25376328DB8C7E006AFC66 /* FotosGruposCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotosGruposCollectionViewCell.swift; sourceTree = "<group>"; };
+		5B25376528DB8D6C006AFC66 /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
 		5B42B75328D418E6009C23B4 /* OnboardPagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPagingViewController.swift; sourceTree = "<group>"; };
 		5B42B77928D4F640009C23B4 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
 		5B42B77B28D4FDA9009C23B4 /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
+		5B73D20228DCDC86005810A4 /* ContatoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				5B42B75328D418E6009C23B4 /* OnboardPagingViewController.swift */,
+				5B12DB5A28DAB5B1003E4106 /* GruposViewController.swift */,
 				5B03C5C928D1135B00F17929 /* DemoViewController.swift */,
 				444A53AF28CFA79C00DABE4E /* ViewController.swift */,
 				444A53C828CFD58400DABE4E /* SearchViewController.swift */,
@@ -108,7 +123,10 @@
 			isa = PBXGroup;
 			children = (
 				444C82AA28DA474D00C5DA2A /* Nunito-Light.ttf */,
+				5B25375F28DB7E66006AFC66 /* Nunito-Regular.ttf */,
+				5B25376528DB8D6C006AFC66 /* Nunito-ExtraLight.ttf */,
 				5B42B77B28D4FDA9009C23B4 /* Nunito-Medium.ttf */,
+				5B12DB5C28DAB741003E4106 /* Nunito-Bold.ttf */,
 				5B42B77928D4F640009C23B4 /* Nunito-ExtraBold.ttf */,
 			);
 			name = Fonts;
@@ -118,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				4416F85B28D3C3C900187540 /* Problem.swift */,
+				5B25376128DB7F33006AFC66 /* Grupo.swift */,
 				5B03C5CB28D1169E00F17929 /* OnboardingInfo.swift */,
 			);
 			name = Models;
@@ -126,7 +145,9 @@
 		444C82AE28DA503D00C5DA2A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5B73D20228DCDC86005810A4 /* ContatoView.swift */,
 				445C276628D25F9000F65117 /* ProblemCell.swift */,
+				5B25376328DB8C7E006AFC66 /* FotosGruposCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -202,7 +223,10 @@
 				444C82AB28DA474D00C5DA2A /* Nunito-Light.ttf in Resources */,
 				5B42B77A28D4F641009C23B4 /* Nunito-ExtraBold.ttf in Resources */,
 				444A53BB28CFA79F00DABE4E /* LaunchScreen.storyboard in Resources */,
+				5B25376028DB7E66006AFC66 /* Nunito-Regular.ttf in Resources */,
+				5B12DB5D28DAB741003E4106 /* Nunito-Bold.ttf in Resources */,
 				444A53B828CFA79F00DABE4E /* Assets.xcassets in Resources */,
+				5B25376628DB8D6C006AFC66 /* Nunito-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,15 +240,19 @@
 				444A53B028CFA79C00DABE4E /* ViewController.swift in Sources */,
 				444A53B628CFA79C00DABE4E /* Ecopitico.xcdatamodeld in Sources */,
 				4416F85C28D3C3C900187540 /* Problem.swift in Sources */,
+				5B25376428DB8C7E006AFC66 /* FotosGruposCollectionViewCell.swift in Sources */,
 				445C276728D25F9000F65117 /* ProblemCell.swift in Sources */,
 				444A53C928CFD58400DABE4E /* SearchViewController.swift in Sources */,
 				444A53AC28CFA79C00DABE4E /* AppDelegate.swift in Sources */,
 				5B03C5CC28D1169E00F17929 /* OnboardingInfo.swift in Sources */,
 				5B42B75428D418E6009C23B4 /* OnboardPagingViewController.swift in Sources */,
+				5B12DB5B28DAB5B1003E4106 /* GruposViewController.swift in Sources */,
+				5B25376228DB7F33006AFC66 /* Grupo.swift in Sources */,
 				444A53AE28CFA79C00DABE4E /* SceneDelegate.swift in Sources */,
 				444A53CB28CFD5C700DABE4E /* ProfileViewController.swift in Sources */,
 				5B03C5CA28D1135B00F17929 /* DemoViewController.swift in Sources */,
 				444A53C728CFD50600DABE4E /* HomeViewController.swift in Sources */,
+				5B73D20328DCDC86005810A4 /* ContatoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
