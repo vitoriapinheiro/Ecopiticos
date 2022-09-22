@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3001640528DC80E2003127E6 /* GruposHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001640428DC80E2003127E6 /* GruposHomeCollectionViewCell.swift */; };
+		3001640728DCD878003127E6 /* ProblemasRecorrentesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001640628DCD878003127E6 /* ProblemasRecorrentesCollectionViewCell.swift */; };
+		3001640928DCD89F003127E6 /* PropostasFamosasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001640828DCD89F003127E6 /* PropostasFamosasCollectionViewCell.swift */; };
 		4416F85C28D3C3C900187540 /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4416F85B28D3C3C900187540 /* Problem.swift */; };
 		444A53AC28CFA79C00DABE4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53AB28CFA79C00DABE4E /* AppDelegate.swift */; };
 		444A53AE28CFA79C00DABE4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53AD28CFA79C00DABE4E /* SceneDelegate.swift */; };
@@ -34,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3001640428DC80E2003127E6 /* GruposHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GruposHomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		3001640628DCD878003127E6 /* ProblemasRecorrentesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemasRecorrentesCollectionViewCell.swift; sourceTree = "<group>"; };
+		3001640828DCD89F003127E6 /* PropostasFamosasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropostasFamosasCollectionViewCell.swift; sourceTree = "<group>"; };
 		4416F85B28D3C3C900187540 /* Problem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
 		444A53A828CFA79C00DABE4E /* Ecopitico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ecopitico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		444A53AB28CFA79C00DABE4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +151,9 @@
 		444C82AE28DA503D00C5DA2A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3001640428DC80E2003127E6 /* GruposHomeCollectionViewCell.swift */,
+				3001640628DCD878003127E6 /* ProblemasRecorrentesCollectionViewCell.swift */,
+				3001640828DCD89F003127E6 /* PropostasFamosasCollectionViewCell.swift */,
 				5B73D20228DCDC86005810A4 /* ContatoView.swift */,
 				445C276628D25F9000F65117 /* ProblemCell.swift */,
 				5B25376328DB8C7E006AFC66 /* FotosGruposCollectionViewCell.swift */,
@@ -238,12 +247,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				444A53B028CFA79C00DABE4E /* ViewController.swift in Sources */,
+				3001640528DC80E2003127E6 /* GruposHomeCollectionViewCell.swift in Sources */,
 				444A53B628CFA79C00DABE4E /* Ecopitico.xcdatamodeld in Sources */,
 				4416F85C28D3C3C900187540 /* Problem.swift in Sources */,
 				5B25376428DB8C7E006AFC66 /* FotosGruposCollectionViewCell.swift in Sources */,
 				445C276728D25F9000F65117 /* ProblemCell.swift in Sources */,
 				444A53C928CFD58400DABE4E /* SearchViewController.swift in Sources */,
 				444A53AC28CFA79C00DABE4E /* AppDelegate.swift in Sources */,
+				3001640728DCD878003127E6 /* ProblemasRecorrentesCollectionViewCell.swift in Sources */,
 				5B03C5CC28D1169E00F17929 /* OnboardingInfo.swift in Sources */,
 				5B42B75428D418E6009C23B4 /* OnboardPagingViewController.swift in Sources */,
 				5B12DB5B28DAB5B1003E4106 /* GruposViewController.swift in Sources */,
@@ -251,6 +262,7 @@
 				444A53AE28CFA79C00DABE4E /* SceneDelegate.swift in Sources */,
 				444A53CB28CFD5C700DABE4E /* ProfileViewController.swift in Sources */,
 				5B03C5CA28D1135B00F17929 /* DemoViewController.swift in Sources */,
+				3001640928DCD89F003127E6 /* PropostasFamosasCollectionViewCell.swift in Sources */,
 				444A53C728CFD50600DABE4E /* HomeViewController.swift in Sources */,
 				5B73D20328DCDC86005810A4 /* ContatoView.swift in Sources */,
 			);
