@@ -18,6 +18,7 @@
 		444A53C928CFD58400DABE4E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53C828CFD58400DABE4E /* SearchViewController.swift */; };
 		444A53CB28CFD5C700DABE4E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53CA28CFD5C700DABE4E /* ProfileViewController.swift */; };
 		444C82AB28DA474D00C5DA2A /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 444C82AA28DA474D00C5DA2A /* Nunito-Light.ttf */; };
+		444C82B128DA604000C5DA2A /* ProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444C82B028DA604000C5DA2A /* ProblemViewController.swift */; };
 		445C276728D25F9000F65117 /* ProblemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445C276628D25F9000F65117 /* ProblemCell.swift */; };
 		5B03C5CA28D1135B00F17929 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03C5C928D1135B00F17929 /* DemoViewController.swift */; };
 		5B03C5CC28D1169E00F17929 /* OnboardingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03C5CB28D1169E00F17929 /* OnboardingInfo.swift */; };
@@ -40,6 +41,7 @@
 		444A53C828CFD58400DABE4E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		444A53CA28CFD5C700DABE4E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		444C82AA28DA474D00C5DA2A /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		444C82B028DA604000C5DA2A /* ProblemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemViewController.swift; sourceTree = "<group>"; };
 		445C276628D25F9000F65117 /* ProblemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemCell.swift; sourceTree = "<group>"; };
 		5B03C5C928D1135B00F17929 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		5B03C5CB28D1169E00F17929 /* OnboardingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInfo.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				444A53C828CFD58400DABE4E /* SearchViewController.swift */,
 				444A53C628CFD50600DABE4E /* HomeViewController.swift */,
 				444A53CA28CFD5C700DABE4E /* ProfileViewController.swift */,
+				444C82B028DA604000C5DA2A /* ProblemViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -91,6 +94,7 @@
 		444A53AA28CFA79C00DABE4E /* Ecopitico */ = {
 			isa = PBXGroup;
 			children = (
+				444C82AD28DA501A00C5DA2A /* Models */,
 				444C82AF28DA505C00C5DA2A /* Delegate */,
 				4416F85A28D3C37B00187540 /* ViewControllers */,
 				444C82AE28DA503D00C5DA2A /* Views */,
@@ -99,7 +103,6 @@
 				444A53B928CFA79F00DABE4E /* LaunchScreen.storyboard */,
 				444A53BC28CFA79F00DABE4E /* Info.plist */,
 				444A53B428CFA79C00DABE4E /* Ecopitico.xcdatamodeld */,
-				444C82AD28DA501A00C5DA2A /* Models */,
 			);
 			path = Ecopitico;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				444A53B628CFA79C00DABE4E /* Ecopitico.xcdatamodeld in Sources */,
 				4416F85C28D3C3C900187540 /* Problem.swift in Sources */,
 				445C276728D25F9000F65117 /* ProblemCell.swift in Sources */,
+				444C82B128DA604000C5DA2A /* ProblemViewController.swift in Sources */,
 				444A53C928CFD58400DABE4E /* SearchViewController.swift in Sources */,
 				444A53AC28CFA79C00DABE4E /* AppDelegate.swift in Sources */,
 				5B03C5CC28D1169E00F17929 /* OnboardingInfo.swift in Sources */,

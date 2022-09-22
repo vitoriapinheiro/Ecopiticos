@@ -162,6 +162,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath :IndexPath){
+        let problemView: ProblemViewController = ProblemViewController()
+//        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.pushViewController(problemView, animated: true)
+
+    }
 }
 
 
