@@ -165,9 +165,9 @@ extension DemoViewController: UIPageViewControllerDelegate {
     
     
     private func hideControls() {
-        pageControlBottomAnchor?.constant = -80
-        skipButtonTopAnchor?.constant = -80
-        nextButtonTopAnchor?.constant = -80
+        pageControlBottomAnchor?.constant = -120
+        skipButtonTopAnchor?.constant = -120
+        nextButtonTopAnchor?.constant = -120
     }
 
     private func showControls() {
