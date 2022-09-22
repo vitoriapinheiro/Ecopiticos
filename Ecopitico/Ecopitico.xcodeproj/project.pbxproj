@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3001640528DC80E2003127E6 /* GruposHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001640428DC80E2003127E6 /* GruposHomeCollectionViewCell.swift */; };
 		4416F85C28D3C3C900187540 /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4416F85B28D3C3C900187540 /* Problem.swift */; };
 		444A53AC28CFA79C00DABE4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53AB28CFA79C00DABE4E /* AppDelegate.swift */; };
 		444A53AE28CFA79C00DABE4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53AD28CFA79C00DABE4E /* SceneDelegate.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3001640428DC80E2003127E6 /* GruposHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GruposHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		4416F85B28D3C3C900187540 /* Problem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
 		444A53A828CFA79C00DABE4E /* Ecopitico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ecopitico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		444A53AB28CFA79C00DABE4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		444C82AE28DA503D00C5DA2A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3001640428DC80E2003127E6 /* GruposHomeCollectionViewCell.swift */,
 				445C276628D25F9000F65117 /* ProblemCell.swift */,
 			);
 			name = Views;
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				444A53B028CFA79C00DABE4E /* ViewController.swift in Sources */,
+				3001640528DC80E2003127E6 /* GruposHomeCollectionViewCell.swift in Sources */,
 				444A53B628CFA79C00DABE4E /* Ecopitico.xcdatamodeld in Sources */,
 				4416F85C28D3C3C900187540 /* Problem.swift in Sources */,
 				445C276728D25F9000F65117 /* ProblemCell.swift in Sources */,
