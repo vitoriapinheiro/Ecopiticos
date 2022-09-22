@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Voçoroca-em-unidade-de-conservação.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Voçoroca-em-unidade-de-conservação 1.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Voçoroca-em-unidade-de-conservação 2.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

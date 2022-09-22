@@ -14,14 +14,13 @@ struct Problem{
     
     static func GetAllProblems() -> [Problem] {
         return [
-            Problem(name: "Expansão Urbana", type: "Grupos", img: "mainImage1"),
-            Problem(name: "Emissão de efluentes domésticos", type: "Grupos", img: "mainImage2"),
-            Problem(name: "Processos Erosivos", type: "Problemas", img: "mainImage3"),
-            Problem(name: "Degradação da vegetação", type: "Problemas", img: "mainImage1"),
-            Problem(name: "Deposição de lixo", type: "Problemas", img: "mainImage1"),
-            Problem(name: "Agricultura de subsistência", type: "Problemas", img: "mainImage1"),
-            Problem(name: "Aterro nos manguezais", type: "Propostas", img: "mainImage1"),
-            Problem(name: "Morte do Manguezal", type: "Propostas", img: "mainImage1")
+            Problem(name: "Xô, Plástico!", type: "Grupos", img: "Foto xô plástico"),
+            Problem(name: "Recapibaribe", type: "Grupos", img: "Recapibaribe"),
+            Problem(name: "Processos Erosivos", type: "Problemas", img: "Voçoroca-em-unidade-de-conservação"),
+            Problem(name: "Degradação da vegetação", type: "Problemas", img: "20170728190147136070a"),
+            Problem(name: "Deposição de lixo", type: "Problemas", img: "dji_0008-16767654"),
+            Problem(name: "Limpeza do Rio Capibaribe", type: "Propostas", img: "image 2"),
+            Problem(name: "Reflorestamento", type: "Propostas", img: "20210830-210830-viveiros-nos-mangues-da-amazonia-1")
         ]
     }
 }

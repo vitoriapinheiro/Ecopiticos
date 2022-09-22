@@ -144,7 +144,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return problems.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ProblemCell else { return UITableViewCell() }
         
@@ -161,6 +161,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         cell.img.image = UIImage(named: currentProblem.img)
         
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let gruposTela = GruposViewController()
+        let grupos = Grupo.GetAllGroups()
+        let grupo = grupos[0]
+        gruposTela.grupo = grupo
+        self.navigationController?.pushViewController(gruposTela, animated: true)
     }
 }
 
