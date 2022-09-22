@@ -151,13 +151,10 @@
 		444C82AE28DA503D00C5DA2A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				3001640428DC80E2003127E6 /* GruposHomeCollectionViewCell.swift */,
 				3001640628DCD878003127E6 /* ProblemasRecorrentesCollectionViewCell.swift */,
 				3001640828DCD89F003127E6 /* PropostasFamosasCollectionViewCell.swift */,
-=======
 				5B73D20228DCDC86005810A4 /* ContatoView.swift */,
->>>>>>> develop
 				445C276628D25F9000F65117 /* ProblemCell.swift */,
 				5B25376328DB8C7E006AFC66 /* FotosGruposCollectionViewCell.swift */,
 			);
