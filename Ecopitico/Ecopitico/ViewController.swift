@@ -29,6 +29,7 @@ class MyTabBarController: UITabBarController{
         items[1].title = "Explorar"
         items[2].image = UIImage(systemName: "person")
         items[2].title = "Perfil"
+
         self.tabBar.tintColor = UIColor(named: "EcoGreen")
         tabBar.layer.shadowOffset = CGSize(width: 0, height: -0.5)
                 tabBar.layer.shadowRadius = 0
@@ -38,3 +39,7 @@ class MyTabBarController: UITabBarController{
     
 }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> develop
