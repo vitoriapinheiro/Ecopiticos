@@ -7,18 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
-<<<<<<< HEAD
 		300E4AD728DB53800051B47C /* ProblemasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300E4AD628DB53800051B47C /* ProblemasCollectionViewCell.swift */; };
 		308EFFDF28D4AA7C0008A589 /* testeSofia2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EFFDE28D4AA7C0008A589 /* testeSofia2ViewController.swift */; };
-=======
-=======
 		3001640528DC80E2003127E6 /* GruposHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001640428DC80E2003127E6 /* GruposHomeCollectionViewCell.swift */; };
 		3001640728DCD878003127E6 /* ProblemasRecorrentesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001640628DCD878003127E6 /* ProblemasRecorrentesCollectionViewCell.swift */; };
 		3001640928DCD89F003127E6 /* PropostasFamosasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001640828DCD89F003127E6 /* PropostasFamosasCollectionViewCell.swift */; };
->>>>>>> develop
 		4416F85C28D3C3C900187540 /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4416F85B28D3C3C900187540 /* Problem.swift */; };
->>>>>>> develop
 		444A53AC28CFA79C00DABE4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53AB28CFA79C00DABE4E /* AppDelegate.swift */; };
 		444A53AE28CFA79C00DABE4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53AD28CFA79C00DABE4E /* SceneDelegate.swift */; };
 		444A53B028CFA79C00DABE4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444A53AF28CFA79C00DABE4E /* ViewController.swift */; };
@@ -45,18 +39,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
-<<<<<<< HEAD
 		300E4AD628DB53800051B47C /* ProblemasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemasCollectionViewCell.swift; sourceTree = "<group>"; };
 		308EFFDE28D4AA7C0008A589 /* testeSofia2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testeSofia2ViewController.swift; sourceTree = "<group>"; };
-=======
-=======
 		3001640428DC80E2003127E6 /* GruposHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GruposHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		3001640628DCD878003127E6 /* ProblemasRecorrentesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemasRecorrentesCollectionViewCell.swift; sourceTree = "<group>"; };
 		3001640828DCD89F003127E6 /* PropostasFamosasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropostasFamosasCollectionViewCell.swift; sourceTree = "<group>"; };
->>>>>>> develop
 		4416F85B28D3C3C900187540 /* Problem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
->>>>>>> develop
 		444A53A828CFA79C00DABE4E /* Ecopitico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ecopitico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		444A53AB28CFA79C00DABE4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		444A53AD28CFA79C00DABE4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,31 +116,25 @@
 		444A53AA28CFA79C00DABE4E /* Ecopitico */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				444A53AB28CFA79C00DABE4E /* AppDelegate.swift */,
 				444A53AD28CFA79C00DABE4E /* SceneDelegate.swift */,
 				444A53AF28CFA79C00DABE4E /* ViewController.swift */,
 				308EFFDE28D4AA7C0008A589 /* testeSofia2ViewController.swift */,
 				444A53CA28CFD5C700DABE4E /* ProfileViewController.swift */,
 				444A53C828CFD58400DABE4E /* SearchViewController.swift */,
-=======
 				444C82AF28DA505C00C5DA2A /* Delegate */,
 				4416F85A28D3C37B00187540 /* ViewControllers */,
 				444C82AE28DA503D00C5DA2A /* Views */,
 				444C82AC28DA476500C5DA2A /* Fonts */,
->>>>>>> develop
 				444A53B728CFA79F00DABE4E /* Assets.xcassets */,
 				444A53B928CFA79F00DABE4E /* LaunchScreen.storyboard */,
 				444A53BC28CFA79F00DABE4E /* Info.plist */,
 				444A53B428CFA79C00DABE4E /* Ecopitico.xcdatamodeld */,
-<<<<<<< HEAD
 				444A53C328CFA9FF00DABE4E /* UIView+Preview.swift */,
 				444A53C228CFA9FF00DABE4E /* UIViewController+Preview.swift */,
 				444A53C628CFD50600DABE4E /* HomeViewController.swift */,
 				300E4AD628DB53800051B47C /* ProblemasCollectionViewCell.swift */,
-=======
 				444C82AD28DA501A00C5DA2A /* Models */,
->>>>>>> develop
 			);
 			path = Ecopitico;
 			sourceTree = "<group>";
