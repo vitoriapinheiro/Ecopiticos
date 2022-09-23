@@ -34,11 +34,11 @@ extension MyProfileViewController: UICollectionViewDelegate, UICollectionViewDat
         }
         
         else if collectionView == self.eventosCollectionView{
-            return 0
+            return 5
         }
         
         else if collectionView ==  self.conquistasCollectionView{
-            return 2
+            return 8
         }
         
         else{
@@ -56,6 +56,15 @@ extension MyProfileViewController: UICollectionViewDelegate, UICollectionViewDat
         
         let cell = conquistasCollectionView.dequeueReusableCell(withReuseIdentifier: "conquistasCell", for: indexPath) as? ConquistasCollectionViewCell
         cell?.configure(imagem: UIImage(named: "aguinha") ?? UIImage(), lugar: "")
+        if indexPath.item == 0 {
+            cell?.configure(imagem: UIImage(named: "evento1") ?? UIImage(), lugar: "")
+        }
+        else if indexPath.item == 1 {
+            cell?.configure(imagem: UIImage(named: "evento2") ?? UIImage(), lugar: "")
+        }
+        else {
+            cell?.configure(imagem: UIImage(named: "eventovazio") ?? UIImage(), lugar: "")
+        }
         return cell ?? UICollectionViewCell()
         
     }
@@ -71,7 +80,15 @@ extension MyProfileViewController: UICollectionViewDelegate, UICollectionViewDat
     fileprivate func makeConquistasCell(_ indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = gruposFavoritosCollectionView.dequeueReusableCell(withReuseIdentifier: "favoritosCell", for: indexPath) as? FavoriteGroupsCollectionViewCell
-        cell?.configure(imagem: UIImage(named: "aguinha") ?? UIImage(), lugar: "")
+        if indexPath.item == 0 {
+            cell?.configure(imagem: UIImage(named: "conquista2") ?? UIImage(), lugar: "")
+        }
+        else if indexPath.item == 1 {
+            cell?.configure(imagem: UIImage(named: "conquista1") ?? UIImage(), lugar: "")
+        }
+        else {
+            cell?.configure(imagem: UIImage(named: "conquistasecreta") ?? UIImage(), lugar: "")
+        }
         return cell ?? UICollectionViewCell()
 
     }
