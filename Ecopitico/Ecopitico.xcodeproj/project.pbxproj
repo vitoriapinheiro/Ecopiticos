@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300E4AD728DB53800051B47C /* ProblemasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300E4AD628DB53800051B47C /* ProblemasCollectionViewCell.swift */; };
+		308EFFDF28D4AA7C0008A589 /* testeSofia2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EFFDE28D4AA7C0008A589 /* testeSofia2ViewController.swift */; };
 		3001640528DC80E2003127E6 /* GruposHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001640428DC80E2003127E6 /* GruposHomeCollectionViewCell.swift */; };
 		3001640728DCD878003127E6 /* ProblemasRecorrentesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001640628DCD878003127E6 /* ProblemasRecorrentesCollectionViewCell.swift */; };
 		3001640928DCD89F003127E6 /* PropostasFamosasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001640828DCD89F003127E6 /* PropostasFamosasCollectionViewCell.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		300E4AD628DB53800051B47C /* ProblemasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemasCollectionViewCell.swift; sourceTree = "<group>"; };
+		308EFFDE28D4AA7C0008A589 /* testeSofia2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testeSofia2ViewController.swift; sourceTree = "<group>"; };
 		3001640428DC80E2003127E6 /* GruposHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GruposHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		3001640628DCD878003127E6 /* ProblemasRecorrentesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemasRecorrentesCollectionViewCell.swift; sourceTree = "<group>"; };
 		3001640828DCD89F003127E6 /* PropostasFamosasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropostasFamosasCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				444A53AF28CFA79C00DABE4E /* ViewController.swift */,
 				6EBE7F1B28D9ED3800117E5E /* Profile */,
 				6EBE7F0C28D9EC4900117E5E /* Views */,
+				308EFFDE28D4AA7C0008A589 /* testeSofia2ViewController.swift */,
+				444A53CA28CFD5C700DABE4E /* ProfileViewController.swift */,
 				444A53C828CFD58400DABE4E /* SearchViewController.swift */,
 				444C82AF28DA505C00C5DA2A /* Delegate */,
 				4416F85A28D3C37B00187540 /* ViewControllers */,
@@ -138,6 +144,10 @@
 				444A53B928CFA79F00DABE4E /* LaunchScreen.storyboard */,
 				444A53BC28CFA79F00DABE4E /* Info.plist */,
 				444A53B428CFA79C00DABE4E /* Ecopitico.xcdatamodeld */,
+				444A53C328CFA9FF00DABE4E /* UIView+Preview.swift */,
+				444A53C228CFA9FF00DABE4E /* UIViewController+Preview.swift */,
+				444A53C628CFD50600DABE4E /* HomeViewController.swift */,
+				300E4AD628DB53800051B47C /* ProblemasCollectionViewCell.swift */,
 				444C82AD28DA501A00C5DA2A /* Models */,
 			);
 			path = Ecopitico;
@@ -282,6 +292,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308EFFDF28D4AA7C0008A589 /* testeSofia2ViewController.swift in Sources */,
+				300E4AD728DB53800051B47C /* ProblemasCollectionViewCell.swift in Sources */,
 				444A53B028CFA79C00DABE4E /* ViewController.swift in Sources */,
 				6EBE7F1628D9EC4900117E5E /* EventosCollectionViewCell.swift in Sources */,
 				6EBE7F2E28D9ED3800117E5E /* ProfileExtension.swift in Sources */,

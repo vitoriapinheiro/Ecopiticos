@@ -29,6 +29,7 @@ class MyTabBarController: UITabBarController{
         items[1].title = "Explorar"
         items[2].image = UIImage(systemName: "person")
         items[2].title = "Perfil"
+
         self.tabBar.tintColor = UIColor(named: "EcoGreen")
         tabBar.layer.shadowOffset = CGSize(width: 0, height: -0.5)
                 tabBar.layer.shadowRadius = 0
@@ -37,19 +38,3 @@ class MyTabBarController: UITabBarController{
     }
     
 }
-
-
-// MARK: - Preview
-#if DEBUG
-import SwiftUI
-
-@available(iOS 13, *)
-struct View_Preview: PreviewProvider {
-    static var previews: some View {
-        Group {
-            MyTabBarController().showPreview().previewDevice("iPhone 13")
-            MyTabBarController().showPreview().previewDevice("iPhone 13").previewInterfaceOrientation(.landscapeLeft)
-        }
-    }
-}
-#endif
