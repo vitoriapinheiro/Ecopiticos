@@ -38,8 +38,3 @@ class MyTabBarController: UITabBarController{
     }
     
 }
-
-<<<<<<< HEAD
-
-=======
->>>>>>> develop
